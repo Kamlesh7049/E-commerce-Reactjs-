@@ -1,0 +1,45 @@
+#header
+{
+    padding: 20px;
+    background-color: rgb(136, 216, 243);
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.space
+{
+    margin-right: 20px;
+}
+
+h1 
+{
+    text-align: center;
+    color: rgb(42, 123, 190);
+}
+
+#cardData
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-right: 20px;
+
+}
+
+
+#footer
+{
+    padding: 20px;
+    height: 250px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+#carticon
+{
+    padding: 2px;
+    background-color: rgb(241, 242, 150);
+    border-radius: 50%;
+}
