@@ -13,11 +13,7 @@
     margin-right: 20px;
 }
 
-h1 
-{
-    text-align: center;
-    color: rgb(42, 123, 190);
-}
+
 
 #cardData
 {
@@ -34,7 +30,7 @@ h1
     padding: 20px;
     height: 250px;
     background-color: lightblue;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 #carticon
@@ -43,3 +39,190 @@ h1
     background-color: rgb(241, 242, 150);
     border-radius: 50%;
 }
+
+/* Shop Banner CSS */
+.Shopbnr {
+    background:url("../images/shopb1.jpg") no-repeat center center/cover;
+    width: 97%;
+    height: 300px;
+    margin-top: 20px;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    
+
+}
+.Shopbbtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cfb733;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Header-CSS */
+
+
+/* Overall header container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo section */
+  .logo h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  
+  /* Icons container */
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Common styles for icons */
+  .icon {
+    font-size: 1.8rem;
+    margin-left: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+  /* Cart icon badge */
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Make header responsive */
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 10px;
+    }
+  
+    .logo h1 {
+      font-size: 1.5rem;
+    }
+  
+    .header-icons {
+      gap: 15px;
+    }
+  
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+
+  /* Home-CSS */
+  /* ======================== */
+
+
+
+  /* Carousel text styling */
+.carousel-text h3, .carousel-text p {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Shop Now Banner */
+  .Shopbnr {
+    background-image: url('../images/shopb1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  
+  .Shopbnr h3, .Shopbnr h2 {
+    margin: 0;
+  }
+  
+  .Shopbnr button {
+    background-color: #ff6347;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Shopbnr button:hover {
+    background-color: #e55347;
+  }
+  
+  /* Ensure cards are responsive */
+  .product-card {
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+    }
+}
+
+
+/* Leptop-CSS */
+/* ===================================*/
+/* Add hover effects to the product card */
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Add hover effects to the title and subtitle */
+.product-card .card-body .card-title:hover {
+  color: #007bff; /* Change title color on hover */
+}
+
+.product-card .card-body .card-subtitle:hover {
+  color: #333; /* Change subtitle color on hover */
+}
+
+/* Button hover effect */
+.add-to-cart-btn:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
+
+

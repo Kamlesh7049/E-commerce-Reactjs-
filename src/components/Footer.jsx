@@ -2,13 +2,13 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={styles.footer}>
+    <footer style={styles.footer}> 
       <div style={styles.container}>
         {/* Logo and Description */}
         <div style={styles.section}>
           <img src="/logo.png" alt="ElectronixZone" style={styles.logo} />
           <p style={styles.text}>
-            Your one-stop shop for all your needs. We offer the best products at unbeatable prices with exceptional customer service.
+           
             "Electronix" gives a techy vibe, and "Zone" suggests a specialized place for all electronics needs.
           </p>
         </div>
@@ -65,7 +65,7 @@ const styles = {
     color: '#fff',
     padding: '20px 0',
     fontFamily: 'Arial, sans-serif',
-    marginTop:"30"
+    marginTop:"5px"
   },
   container: {
     display: 'flex',
@@ -99,12 +99,12 @@ const styles = {
     fontSize: '14px',
   },
   socialLinks: {
-    display: 'flex',
-    gap: '10px',
+    // display: 'flex',
+    // gap: '10px',
   },
   icon: {
-    width: '24px',
-    height: '24px',
+    // width: '24px',
+    // height: '24px',
   },
   copyright: {
     marginTop: '20px',

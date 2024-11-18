@@ -1,4 +1,6 @@
+
 import { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
@@ -6,19 +8,16 @@ import Card from "react-bootstrap/Card";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../cartSlice";
 
-import ban1 from "../images/i1.png";
-import ban2 from "../images/i1.png";
-import ban3 from "../images/i1.png";
 
-import shop from "../images/shopb1.jpg";
 
-const Home = () => {
+const Mobile = () => {
+    const { leptop } = useParams();
   const [mydata, setMydata] = useState([]);
   const dispatch = useDispatch();
 
   // Load data from API
   const loadData = () => {
-    let api = "http://localhost:3000/shopping";
+    let api = "http://localhost:3000/shopping/?category=Mobile";
     axios.get(api).then((res) => {
       setMydata(res.data);
     });
@@ -121,48 +120,8 @@ const Home = () => {
 
   return (
     <>
-      <Carousel>
-        <Carousel.Item>
-          <img src={ban1} width="100%" height="600" />
-          <Carousel.Caption>
-            <div style={{alignContent:"center",alignItems:"ce"}}>
-            <h3>Get 15% On Sale</h3>
-            <p>UNDER FAVORABLE SMART GADGETS</p>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={ban2} width="100%" height="600" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={ban3} width="100%" height="600" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
-      {/* <hr size="6" color="black" /> */}
-      <h3 style={{textAlign:"center", marginTop:"20px", fontWeight:"600" ,fontFamily:"Arial,sans-serif"}}> Our Trending Products</h3>
-      {/* <hr size="6" color="black" /> */}
-
-      <div
-        id="cardData"
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around",
-          marginTop: "30px",
-          padding: "0 20px",
-        }}
-      >
+         <h3 style={{textAlign:"center", marginTop:"20px", fontWeight:"600" ,fontFamily:"Arial,sans-serif"}}> Our Trending Leptop</h3>
+      <div id="cardData" >
         {ans}
         
       </div>
@@ -177,4 +136,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Mobile;
+

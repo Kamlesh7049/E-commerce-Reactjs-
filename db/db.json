@@ -2,75 +2,75 @@
    "shopping":[
     {
         "id":1,
-        "name":"Apple MacBook Air Laptop",
-        "price":69999.00,
-        "description":"Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage.",
-        "category":"",
+        "name":"Apple MacBook Air ",
+        "price":69999,
+        "description":"Apple MacBook Air Laptop Apple M1 chip and I5core. ",
+        "category":"Leptop",
         "image":"https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg"
     },
     {
         "id":2,
-        "name":" Wireless Compact Mouse",
+        "name":" Wireless Compact ",
         "price":599,
-        "description":"Lenovo 150 Wireless Compact Mouse, 1K DPI Optical sensor, 2.4GHz Wireless NanoUSB, 10m range, 3button.",
-        "category":"",
+        "description":"Lenovo 150 Wireless Compact Mouse, 1K DPI.",
+        "category":"Mouse",
         "image":"https://m.media-amazon.com/images/I/514My746aFL._SL1500_.jpg"
     },
     {
         "id":3,
         "name":"Apple iPhone 13",
         "price":1499,
-        "description":"15 cm (6.1-inch) Super Retina XDR display A15 Bionic chip for lightning-fast performance The latest-generation Photographic ",
-        "category":"",
+        "description":"15 cm (6.1-inch) Super Retina XDR display A15 . ",
+        "category":"Mobile",
         "image":"https://m.media-amazon.com/images/I/61VuVU94RnL._SX679_.jpg"
     },
     
     {
         "id":4,
-        "name":" Wireless in Ear Earbuds",
+        "name":" Wireless ",
         "price":1299,
-        "description":"Boult Audio K40 True Wireless in Ear Earbuds with 48H Playtime, Clear Calling 4 Mics, 45ms Low Latency Gaming.",
-        "category":"",
+        "description":"Boult Audio K40 True Wireless in Ear Earbuds with 48H.",
+        "category":"Earbuds",
         "image":"https://m.media-amazon.com/images/I/41QBL9C991L._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
         "id":5,
         "name":"Full HD Smart Wi-Fi CCTV",
         "price":999,
-        "description":"Home Security Camera | 360° with Pan Tilt | View & Talk | Motion Alert | Night Vision | SD Card (Upto 128 GB), Alexa & Google Support",
-        "category":"",
+        "description":"Home Security Camera | 360° with Pan Tilt | View & Talk. ",
+        "category":"CCTV",
         "image":"https://m.media-amazon.com/images/I/31Kud6Ls9QL._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
         "id":6,
-        "name":"boAt Portable Wireless Speaker",
+        "name":"boAt Portable Wireless",
         "price":999,
-        "description":"Immersive Sound,IPX4 Water Resistance, True Wireless Feature, Up to 11H Total Playtime, Multi-Connectivity Modes With Type C Charging",
-        "category":"",
+        "description":"Immersive Sound,IPX4 Water Resistance, True Wireless Feature.",
+        "category":"Speaker",
         "image":"https://m.media-amazon.com/images/I/41ssC++20hL._SY300_SX300_.jpg"
     },
     {
         "id":7,
-        "name":" Acer TV 32 inch",
+        "name":" Acer 32 inch",
         "price":12000,
-        "description":"Acer 80 cm (32 inches) V Series HD Ready Smart QLED Google TV AR32GR2841VQD (Black)",
-        "category":"",
+        "description":"Acer 80 cm (32 inches) V Series HD Ready Smart QLED Google.",
+        "category":"TV",
         "image":"https://m.media-amazon.com/images/I/41KawWhzjZL._SY300_SX300_QL70_FMwebp_.jpg"
     },
     {
         "id":8,
-        "name":" DUAL Inverter Split AC",
+        "name":" DUAL Inverter Split",
         "price":35790,
         "description":"Faster Cooling & Energy Saving, 2024 Model, TS-Q13JNYE, White)",
-        "category":"",
+        "category":"AC",
         "image":"https://m.media-amazon.com/images/I/51dzcWwXTRL._SY445_SX342_QL70_FMwebp_.jpg"
     },
     {
         "id":9,
-        "name":"Noise Twist Round dial Smart Watch ",
+        "name":"Noise Twist Round dial ",
         "price":2300,
-        "description":"Smart Watch with Bluetooth Calling, 1.38 TFT Display, up-to 7 Days Battery, 100+ Watch Faces,",
-        "category":"",
+        "description":"Smart Watch with Bluetooth Calling, 1.38 TFT Display, up-to 7 Days .",
+        "category":"Smart Watch",
         "image":"https://m.media-amazon.com/images/I/41mIsvbD4pL._SX300_SY300_QL70_FMwebp_.jpg"
     }
     

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
@@ -6,19 +7,18 @@ import Card from "react-bootstrap/Card";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../cartSlice";
 
-import ban1 from "../images/i1.png";
-import ban2 from "../images/i1.png";
-import ban3 from "../images/i1.png";
 
-import shop from "../images/shopb1.jpg";
 
-const Home = () => {
+const Leptop = () => {
+  const { leptop } = useParams();
+
+  
   const [mydata, setMydata] = useState([]);
   const dispatch = useDispatch();
 
   // Load data from API
   const loadData = () => {
-    let api = "http://localhost:3000/shopping";
+    let api = "http://localhost:3000/shopping/?category=Leptop";
     axios.get(api).then((res) => {
       setMydata(res.data);
     });
@@ -70,17 +70,32 @@ const Home = () => {
         />
         <Card.Body style={{ padding: "20px", textAlign: "center" }}>
           <Card.Title
-            style={{ fontSize: "1.2em", fontWeight: "bold", color: "#333" }}
+            style={{
+              fontSize: "1.2em",
+              fontWeight: "bold",
+              color: "#333",
+              transition: "color 0.3s ease",
+            }}
           >
             {key.name}
           </Card.Title>
           <Card.Subtitle
-            style={{ color: "#777", fontSize: "1em", marginBottom: "10px" }}
+            style={{
+              color: "#777",
+              fontSize: "1em",
+              marginBottom: "10px",
+              transition: "color 0.3s ease",
+            }}
           >
             {key.category}
           </Card.Subtitle>
           <Card.Text
-            style={{ fontSize: "1em", color: "#555", marginBottom: "15px" }}
+            style={{
+              fontSize: "1em",
+              color: "#555",
+              marginBottom: "15px",
+              transition: "color 0.3s ease",
+            }}
           >
             {key.description}
             <br />
@@ -121,60 +136,43 @@ const Home = () => {
 
   return (
     <>
-      <Carousel>
-        <Carousel.Item>
-          <img src={ban1} width="100%" height="600" />
-          <Carousel.Caption>
-            <div style={{alignContent:"center",alignItems:"ce"}}>
-            <h3>Get 15% On Sale</h3>
-            <p>UNDER FAVORABLE SMART GADGETS</p>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={ban2} width="100%" height="600" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={ban3} width="100%" height="600" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
-      {/* <hr size="6" color="black" /> */}
-      <h3 style={{textAlign:"center", marginTop:"20px", fontWeight:"600" ,fontFamily:"Arial,sans-serif"}}> Our Trending Products</h3>
-      {/* <hr size="6" color="black" /> */}
-
-      <div
-        id="cardData"
+      <h3
         style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around",
-          marginTop: "30px",
-          padding: "0 20px",
+          textAlign: "center",
+          marginTop: "20px",
+          fontWeight: "600",
+          fontFamily: "Arial, sans-serif",
         }}
       >
-        {ans}
-        
-      </div>
+        Our Trending Leptop
+      </h3>
+      <div id="cardData">{ans}</div>
 
-      <div  className="Shopbnr">
-      <h3 style={{fontSize:"24px",color:"#FFFFFF",fontFamily:"Arial,sans-serif",fontWeight:"400"}}>Big saving on Topselling smartphone</h3>
-        <h2 style={{fontSize:"32px",color:"#FFFFFF",fontFamily:"Arial,sans-serif",fontWeight:"600"}}>Get 85% off on Big Billion Days 2024</h2>
-       <button className="Shopbbtn">Shop now</button>
+      <div className="Shopbnr">
+        <h3
+          style={{
+            fontSize: "24px",
+            color: "#FFFFFF",
+            fontFamily: "Arial, sans-serif",
+            fontWeight: "400",
+          }}
+        >
+          Big saving on Topselling smartphone
+        </h3>
+        <h2
+          style={{
+            fontSize: "32px",
+            color: "#FFFFFF",
+            fontFamily: "Arial, sans-serif",
+            fontWeight: "600",
+          }}
+        >
+          Get 85% off on Big Billion Days 2024
+        </h2>
+        <button className="Shopbbtn">Shop now</button>
       </div>
-        
     </>
   );
 };
 
-export default Home;
+export default Leptop;

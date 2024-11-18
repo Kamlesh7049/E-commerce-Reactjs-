@@ -1,10 +1,8 @@
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Table from "react-bootstrap/Table";
 import { CiSquarePlus } from "react-icons/ci";
 import { CiSquareMinus } from "react-icons/ci";
-import { qntyInc } from "../cartSlice";
-import { qntyDec } from "../cartSlice";
+import { qntyInc, qntyDec, itemRemove } from "../cartSlice";
 
 const Cart = () => {
   const MyCart = useSelector((state) => state.mycart.cart);
@@ -13,73 +11,99 @@ const Cart = () => {
   const qtyIncrement = (id) => {
     dispatch(qntyInc({ id: id }));
   };
+
   const qtyDecrement = (id) => {
     dispatch(qntyDec({ id: id }));
   };
 
-  const Data = MyCart.map((key) => {
-    return (
-      <>
-        <tr>
-          <td>
-            <img src={key.image} width="100" height="100" />
-          </td>
-          <td>{key.name}</td>
-          <td>{key.description}</td>
-          <td>{key.category}</td>
-          <td>{key.price}</td>
-          <td>
-            {/* <CiSquareMinus />
-      <span style={{marginLeft:'10px',marginRight:'10px',fontWeight:'bold'}}>{key.qnty}</span>
-      <a href="#" onClick={()=>{qtyIncrement(key.id)}}>
-      </a>
-      <CiSquarePlus />
-      <a href="#" onClick={()=>{qtyDecrement(Key.id)}}></a> */}
+  const removeItem = (id) => {
+    dispatch(itemRemove({ id: id }));
+  };
 
-            <CiSquareMinus
-              onClick={() => qtyDecrement(key.id)}
-              style={{ cursor: "pointer" }}
-            />
-            <span
-              style={{
-                marginLeft: "10px",
-                marginRight: "10px",
-                fontWeight: "bold",
-              }}
-            >
-              {key.qnty}
-            </span>
-            <CiSquarePlus
-              onClick={() => qtyIncrement(key.id)}
-              style={{ cursor: "pointer" }}
-            />
-          </td>
-          <td>{key.price * key.qnty}</td>
-        </tr>
-      </>
+  let totalAmount = 0;
+
+  const Data = MyCart.map((key) => {
+    totalAmount += key.price * key.qnty;
+    return (
+      <tr key={key.id}>
+        <td>
+          <img src={key.image} width="100" height="100" alt={key.name} />
+        </td>
+        <td>{key.name}</td>
+        <td>{key.description}</td>
+        <td>{key.category}</td>
+        <td>₹{key.price}</td>
+        <td>
+          <a href="#" onClick={() => qtyDecrement(key.id)}>
+            <CiSquareMinus />
+          </a>
+          <span
+            style={{
+              marginLeft: "10px",
+              marginRight: "10px",
+              fontWeight: "bold",
+              cursor: "pointer",
+            }}
+          >
+            {key.qnty}
+          </span>
+          <a href="#" onClick={() => qtyIncrement(key.id)}>
+            <CiSquarePlus />
+          </a>
+        </td>
+        <td>₹{key.price * key.qnty}</td>
+        <td>
+          <button onClick={() => removeItem(key.id)}>Remove</button>
+        </td>
+      </tr>
     );
   });
 
   return (
-    <>
-      <center>
-        <h4>My Shoping Cart</h4>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th> Name</th>
-              <th>Description</th>
-              <th>Category</th>
-              <th> Price</th>
-              <th> Quantity</th>
-              <th> Total</th>
-            </tr>
-          </thead>
-          <tbody>{Data}</tbody>
-        </Table>
-      </center>
-    </>
+    <center>
+      {/* <h4>My Shopping Cart</h4> */}
+      <h3
+        style={{
+          textAlign: "center",
+          marginTop: "20px",
+          fontWeight: "600",
+          fontFamily: "Arial, sans-serif",
+        }}
+      >
+        My Shopping Carts
+      </h3>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Data}
+          <tr>
+            <td>#</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+           
+            <td>  
+            {/* <td colSpan="6" style={{ textAlign: "right", fontWeight: "bold" }}> */}
+              <h5>Total Amount:</h5>
+            </td>
+            <td style={{ fontWeight: "bold" }}>₹{totalAmount}/-</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </Table>
+    </center>
   );
 };
 

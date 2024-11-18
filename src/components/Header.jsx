@@ -1,35 +1,37 @@
 import { useSelector } from "react-redux";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { GrUserAdmin } from "react-icons/gr";
-import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-const Header=()=>{
-  const mycart= useSelector(state=>state.mycart.cart);
-  // console.log(mycart);
-  const navigate=useNavigate();
+// import './Header.css'; // We'll add some styles in a separate CSS file for better organization
 
+const Header = () => {
+  const mycart = useSelector(state => state.mycart.cart);
+  const navigate = useNavigate();
 
-   const cartPage=()=>{
+  const cartPage = () => {
     navigate("/cart");
-   }
+  }
 
+  const cartLen = mycart.length;
 
-  const cartLen= mycart.length;
-    return(
-        <>
-          <div id="header">
+  return (
+    <header className="header-container">
+      <div className="logo">
+        {/* <h1>MyShop</h1> Optional logo or shop name */}
+      </div>
 
-          <span id="carticon"> {cartLen} </span>
-          
-          <a href="#" onClick={cartPage}>
-          <FaShoppingCart  className="space"  />
-          </a>
-           
-
-          <GrUserAdmin  className="space"  />
-          <FaSearch  className="space"/>
-          </div>
-        </>
-    )
+      <div className="header-icons">
+        <div className="cart-icon" onClick={cartPage}>
+          <FaShoppingCart className="icon" />
+          {cartLen > 0 && <span className="cart-count">{cartLen}</span>}
+        </div>
+        <GrUserAdmin className="icon" />
+        <FaSearch className="icon" />
+      </div>
+    </header>
+  );
 }
+
 export default Header;
+
+  
