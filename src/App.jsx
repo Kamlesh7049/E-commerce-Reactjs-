@@ -7,6 +7,7 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import Leptop from "./products/Leptop"; // Ensure Leptop is correctly imported
 import Mobile from "./products/Mobile";
+import ProductDetail from "./pages/ProductDetail";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           {/* Correct dynamic route */}
           <Route path="products/leptop" element={<Leptop />} />
           <Route path="products/mobile" element={<Mobile/>}/>
+          <Route path="prodetail/:id" element={<ProductDetail/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

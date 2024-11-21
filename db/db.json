@@ -19,7 +19,7 @@
     {
         "id":3,
         "name":"Apple iPhone 13",
-        "price":1499,
+        "price":149999,
         "description":"15 cm (6.1-inch) Super Retina XDR display A15 . ",
         "category":"Mobile",
         "image":"https://m.media-amazon.com/images/I/61VuVU94RnL._SX679_.jpg"
@@ -72,6 +72,30 @@
         "description":"Smart Watch with Bluetooth Calling, 1.38 TFT Display, up-to 7 Days .",
         "category":"Smart Watch",
         "image":"https://m.media-amazon.com/images/I/41mIsvbD4pL._SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+        "id":10,
+        "name":"HP",
+        "price":50000,
+        "description":"HP i5 Laptop Intel Core Celeron N4500 Processor Laptop.",
+        "category":"Leptop",
+        "image":"https://m.media-amazon.com/images/I/61u5dUN1CQL._SX679_.jpg"
+    },
+    {
+        "id":11,
+        "name":"Acer ",
+        "price":55000,
+        "description":"Acer Aspire 3 Laptop Intel Core Celeron N4500 Processor Laptop. ",
+        "category":"Leptop",
+        "image":"https://m.media-amazon.com/images/I/41te6o+zQ7L._SY300_SX300_.jpg"
+    },
+    {
+        "id":12,
+        "name":"Apple iPhone 13",
+        "price":65000,
+        "description":"Apple iPhone 16 (128 GB With iOS 18, you can tint your Home Screen. ",
+        "category":"Mobile",
+        "image":"https://m.media-amazon.com/images/I/713SsA7gftL._SX679_.jpg"
     }
     
    ]

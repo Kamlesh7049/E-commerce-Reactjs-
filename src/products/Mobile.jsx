@@ -120,7 +120,7 @@ const Mobile = () => {
 
   return (
     <>
-         <h3 style={{textAlign:"center", marginTop:"20px", fontWeight:"600" ,fontFamily:"Arial,sans-serif"}}> Our Trending Leptop</h3>
+         <h3 style={{textAlign:"center", marginTop:"20px", fontWeight:"600" ,fontFamily:"Arial,sans-serif"}}> Our Trending Mobile</h3>
       <div id="cardData" >
         {ans}
         
