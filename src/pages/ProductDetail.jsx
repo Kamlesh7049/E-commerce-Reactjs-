@@ -11,7 +11,8 @@ const ProductDetail = () => {
     const [mydata,setMydata]=useState({});
     const dispatch = useDispatch();
 
-    const loadData=()=>{
+    const loadData=(e)=>{
+      pre
         let api=`http://localhost:3000/shopping/${id}`;
         axios.get(api).then((res)=>{
           setMydata(res.data);
@@ -54,7 +55,7 @@ const ProductDetail = () => {
             <h6> About Product : {mydata.description} </h6> 
             <h4> Price : {mydata.price}</h4>
             <h6> Product: {mydata.category} </h6>
-            <h6> This is {mydata.type} Stock</h6>
+            <h6> This is {mydata.type} Stock</h6>    
             <Button
              onClick={()=>{cartDataAdd(mydata.id, mydata.name, mydata.price, mydata.category, mydata.description, mydata.image)}}
              >AddToCart</Button>

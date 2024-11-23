@@ -29,17 +29,17 @@
         "id":4,
         "name":" Wireless ",
         "price":1299,
-        "description":"Boult Audio K40 True Wireless in Ear Earbuds with 48H.",
+        "description":"Oneplus Audio K40 True Wireless in Ear Earbuds with 48H.",
         "category":"Earbuds",
-        "image":"https://m.media-amazon.com/images/I/41QBL9C991L._SX300_SY300_QL70_FMwebp_.jpg"
+        "image":"https://m.media-amazon.com/images/I/311+txXADYL._SY300_SX300_.jpg"
     },
     {
         "id":5,
-        "name":"Full HD Smart Wi-Fi CCTV",
+        "name":"Samsung Galaxy ",
         "price":999,
-        "description":"Home Security Camera | 360° with Pan Tilt | View & Talk. ",
-        "category":"CCTV",
-        "image":"https://m.media-amazon.com/images/I/31Kud6Ls9QL._SX300_SY300_QL70_FMwebp_.jpg"
+        "description":"Samsung Galaxy S23 Ultra 5G AI Smartphone (Phantom Black, 12GB) ",
+        "category":"Mobile",
+        "image":"https://m.media-amazon.com/images/I/71goZuIha-L._SL1500_.jpg"
     },
     {
         "id":6,
@@ -79,7 +79,7 @@
         "price":50000,
         "description":"HP i5 Laptop Intel Core Celeron N4500 Processor Laptop.",
         "category":"Leptop",
-        "image":"https://m.media-amazon.com/images/I/61u5dUN1CQL._SX679_.jpg"
+        "image":"https://m.media-amazon.com/images/I/41cniuDXY7L._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {
         "id":11,

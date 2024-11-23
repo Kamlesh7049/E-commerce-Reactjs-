@@ -11,13 +11,14 @@ import ban1 from "../images/i1.png";  // Make sure the path is correct
 import ban2 from "../images/i1.png";  // Make sure the path is correct
 import ban3 from "../images/i1.png";  // Make sure the path is correct
 
-import shop from "../images/shopb1.jpg"; // Make sure the path is correct
+// import shop from "../images/shopb1.jpg"; // Make sure the path is correct
 
 const Home = () => {
   const [mydata, setMydata] = useState([]); // Data for products
   const dispatch = useDispatch(); // Redux dispatch to add to cart
   const navigate = useNavigate(); // Correctly calling useNavigate()
 
+  
   // Load data from API
   const loadData = () => {
     let api = "http://localhost:3000/shopping";
